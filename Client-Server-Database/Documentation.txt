@@ -1,4 +1,4 @@
-I have two main classes: 'Client' and 'Server'.
+Programm has two main classes: 'Client' and 'Server'.
 
 1. Class 'Client' creates a JFrame named 'console'. The frame has several functions such as changing the background color, foreground color, increasing text size, saving data from JTextArea to a file, and communicating with the server. I have three methods: 'ReadFromServer' where I create a thread that reads data from the socket and adds this data to the TextArea, 'WriteToServer' which is another thread, and two Listeners that are triggered when the user types on Enter or clicks the 'Enter' button. The last line of the text is sent to the server. There's also a main method where I create the Client class and use the methods 'ReadFromServer' and 'WriteToServer'. I also have a constructor where I configure the JFrame ('console').
 
