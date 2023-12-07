@@ -1,0 +1,27 @@
+I have two main classes: 'Client' and 'Server'.
+
+1. Class 'Client' creates a JFrame named 'console'. The frame has several functions such as changing the background color, foreground color, increasing text size, saving data from JTextArea to a file, and communicating with the server. I have three methods: 'ReadFromServer' where I create a thread that reads data from the socket and adds this data to the TextArea, 'WriteToServer' which is another thread, and two Listeners that are triggered when the user types on Enter or clicks the 'Enter' button. The last line of the text is sent to the server. There's also a main method where I create the Client class and use the methods 'ReadFromServer' and 'WriteToServer'. I also have a constructor where I configure the JFrame ('console').
+
+2. Class 'Server' is where data is processed and a response is given depending on the input data from the client. A user can log in to the server (In the program, data from the ‘login’ and ‘password’ columns of the ‘usersec’ table are read, and if such a password and login exist, it proceeds. Then, if it was the user's login and password, the 'UserWork' class will start. If it was the admin's login and password, then 'AdminWork' will start). A user can sign up (a user can enter some information about themselves, this information is appended to the 'usersec' table and the program will create a table with the user’s login +_library where only this user’s books will be stored) or quit (the frame will close, and the 'Server' and 'Client' classes will close).
+
+3. Class 'AdminWork' - the admin can perform 8 types of work:
+   -> (1) See all available books (read data from the general library and return this data to the client),
+   -> (2) Add a new book (write information about the book and add it to the general library),
+   -> (3) Open a user's book (the admin enters the user's login, and if it exists, opens the table with the name 'log+_library'),
+   -> (4) Add a book to the user's library (write the user's login, if it exists - write the book's name and delete it),
+   -> (5) Delete a user (Delete information about the user in the 'usersec' table, and delete the user's table),
+   -> (6) Add a user (add information about a user (if this user does not exist) and create a table with the user’s login +_library where only this user’s books will be stored),
+   -> (7) Display information about users (read data from the 'usersec' table),
+   -> (8) Delete a book (The admin can choose to delete from 1) the user’s library – they enter the username and if it exists, they enter the name of the book and it is deleted. 2) from the general library - they simply enter the name of the book and it is deleted.),
+   -> (.) Back to the main menu (break from the loop and back to the main menu). In all functions, the program works with the database.
+
+4. Class 'UserWork'- a user can perform 4 types of work:
+   -> (1) See all available books (read data from the general library and return this data to the client),
+   -> (2) Add a new book (write information about the book and add it to the general library),
+   -> (3) Open your books (open the user's own table),
+   -> (4) Add a book to your library (add a new book to the user's own library),
+   -> (.) Back to the main menu (break from the loop and back to the main menu).
+
+5. Class 'CheckLoginExists' - it's an ancillary class, it checks if the login already exists (reads all data from the 'login' data in the 'usersec' table, and returns true if this login exists).
+
+6. Class 'CreateFile'- it's an ancillary class, for saving data (Works with JFileChooser, the user chooses a directory and saves data from the area).
