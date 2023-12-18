@@ -119,18 +119,15 @@ public class Server {
             else if (choice == 's') {
                 //Enter pers. data
                 while(true){
-                    out.println("Write your personal information: + \n");
-
                     out.println("Name: ");
-                    String inputName = in.readLine();
-                    System.out.println(inputName);
-                    if(inputName == null || inputName.trim().isEmpty() )
+                    String name = in.readLine();
+                    System.out.println(name);
+                    if(name == null || name.trim().isEmpty() )
                     {
                         out.println("You must enter name");
                         break;
                     }
 
-                    System.out.println("Тут ввело имя ");
                     out.println("Surname: ");
 
                     surname = in.readLine().trim();
