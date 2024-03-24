@@ -6,3 +6,5 @@ Server: The main part of the application that provides centralised processing of
 Database: A data repository used to permanently store and access information. The programme works with the MySql database
 
 Client: A text-based interface that allows users to interact with the application through an intuitive user interface. The client part provides functionality for sending queries to the server and displaying the resulting data.
+
+Information about "How program works?" you can find in Documentation.txt
