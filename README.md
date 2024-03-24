@@ -1,4 +1,4 @@
-is a  application designed for efficient data management and processing. Its architecture is based on a client-server model that provides secure and reliable communication between client requests and the database.
+Is a  application designed for efficient data management and processing. Its architecture is based on a client-server model that provides secure and reliable communication between client requests and the database.
 Key components:
 
 Server: The main part of the application that provides centralised processing of requests from clients. The server is designed to process data, interact with the database, and provide clients with the necessary information.
